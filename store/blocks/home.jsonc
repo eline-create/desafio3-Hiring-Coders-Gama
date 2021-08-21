@@ -2,10 +2,94 @@
   "store.home": { 
     "blocks": [
       "list-context.image-list#home",
-      "flex-layout.row#a"
-      // "list-context.product-list#demo1"  
+      "search-result-layout.customQuery#home"
     ]     
   },
+  "search-result-layout.customQuery#home": {
+    "props": {
+      "querySchema": {
+        "skusFilter": "FIRST_AVAILABLE",
+        "simulationBehavior": "skip",
+        "maxItemsPerPage": 8,
+        "queryField": "upMedal",
+        "mapField": "b"
+      }
+    },
+    "blocks": [ "search-result-layout.desktop#home", "search-result-layout.mobile" ]
+  }, 
+  "search-result-layout.desktop#home": {
+    "children": [
+      "search-content#home"],
+    "props": {
+      "preventRouteChange": true,
+      "defaultGalleryLayout": "grid"
+    }
+  },
+  "search-result-layout.mobile#home": {
+    "children": [
+      "search-content#home"],
+    "props": {
+      "preventRouteChange": true,
+      "category": "20" ,
+      "defaultGalleryLayout": "grid",
+      "pagination": "show-more"
+    }
+  },
+  "search-content#home": {
+    "blocks": [
+      "gallery", "not-found"
+    ]
+  },
+  "gallery": {
+    "props": {
+      "layouts": [
+        {
+          "name": "grid",
+          "component": "GridSummary",
+          "itemsPerRow": {
+            "desktop": 2,
+            "tablet": 2,
+            "phone": 1
+          }
+        }
+      ],
+      "GridSummary": "product-summary.shelf#homeProducts"
+    }
+  },
+  "product-summary.shelf#homeProducts": {
+    "children": [
+      "product-summary-name",
+      "product-summary-image",
+      "product-summary-price",
+      "product-summary-sku-selector",
+      "product-summary-buy-button"
+    ]
+  },
+  
+    
+  
+
+ 
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   "flex-layout.row#a": {
     "children": ["list-context.product-list#demo1"]
   }, 

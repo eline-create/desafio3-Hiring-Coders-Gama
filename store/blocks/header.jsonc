@@ -161,45 +161,137 @@
   },
   "flex-layout.row#footer-desktop": { 
     "children": [
-      "login",
-      "rich-text#item1",
-      "rich-text#item2",
-      "rich-text#item3"
-    ]
+      "flex-layout.col#spacer",
+      "flex-layout.col#menu",
+      "flex-layout.col#spacer"
+      // "login",
+      // "rich-text#item1",
+      // "rich-text#item2",
+      // "rich-text#item3",
+      // "sandbox#h1"
+    ],
+    "props": {
+      "horizontalAlign": "center",
+      "preventHorizontalStretch": true
+    }
+  },
+  "flex-layout.col#menu": {
+    "children": [
+      "vtex.menu@2.x:menu#websites"
+    ],
+    "props": {
+      "width": "auto"
+    }
   },
   "login": {
     "props": {
-    "emailAndPasswordTitle": "LOG-IN",
-    "accessCodeTitle": "Access Code LOG-IN",
-    "emailPlaceholder": "e-mail",
-    "passwordPlaceholder": "password",
-    "showPasswordVerificationIntoTooltip": true
+      "emailAndPasswordTitle": "LOG-IN",
+      "accessCodeTitle": "Access Code LOG-IN",
+      "emailPlaceholder": "e-mail",
+      "passwordPlaceholder": "password",
+      "showPasswordVerificationIntoTooltip": true,
+      "logInButtonBehavior": "link"
     }  
 },
 
 "rich-text#item1": {
   "props": {
-  "textAlignment": "LEFT",
-  "textPosition": "LEFT",
+  "textAlignment": "CENTER",
+  "textPosition": "CENTER",
   "text": "[Desafios](/)",
   "textColor": "c-on-emphasis"
  }    
 } ,
 "rich-text#item2": {
   "props": {
-  "textAlignment": "LEFT",
-  "textPosition": "LEFT",
+  "textAlignment": "CENTER",
+  "textPosition": "CENTER",
   "text": "[Loja](/)",
   "textColor": "c-on-emphasis"
  }    
 },
 "rich-text#item3": {
   "props": {
-  "textAlignment": "LEFT",
-  "textPosition": "LEFT",
+  "textAlignment": "CENTER",
+  "textPosition": "CENTER",
   "text": "[Suporte](https://www.whatsapp.com/)",
   "textColor": "c-on-emphasis"
    } 
- }
+ },
+
+
+
+
+ "vtex.menu@2.x:menu#websites": {
+  "children": [
+    "login",
+    "menu-item#desafios",
+    "menu-item#loja",
+    "menu-item#whatsapp"
+  ]
+},
+"menu-item#desafios": {
+  "props": {
+    "id": "menu-item-desafios",
+    "type": "custom",
+    "highlight": false,
+    "itemProps": {
+      "type": "internal",
+      "href": "#",
+      "noFollow": false,
+      "tagTitle": "Desafios",
+      "text": "DESAFIOS"
+    },
+    "iconProps": {
+      "id": "mpa-filter--filled",
+      "size": 16,
+      "viewBox": "0 0 16 16",
+      "activeClassName": "rebel-pink",
+      "mutedClassName": "c-action-primary"
+    }
+  }
+},
+"menu-item#loja": {
+  "props": {
+    "id": "menu-item-loja",
+    "type": "custom",
+    "highlight": false,
+    "itemProps": {
+      "type": "internal",
+      "href": "#",
+      "noFollow": false,
+      "tagTitle": "Loja",
+      "text": "LOJA"
+    },
+    "iconProps": {
+      "id": "hpa-cart",
+      "size": 16,
+      "viewBox": "0 0 16 16",
+      "activeClassName": "rebel-pink",
+      "mutedClassName": "c-action-primary"
+    }
+  }
+},
+  "menu-item#whatsapp": {
+    "props": {
+      "id": "menu-item-whatsapp",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "https://api.whatsapp.com/send?l=pt-BR&phone=5511964335064&text=Para%20falar%20com%20a%20Gabi%F0%9F%91%B1%F0%9F%8F%BB%E2%80%8D%E2%99%80%EF%B8%8F%0A%0AClique%20enviar%F0%9F%91%89%0A%0A------------%0A*D%C3%BAvida%20sobre%3A*%20Big%20Conquest%20500k%0A*ID%3A*%2052292",
+        "noFollow": false,
+        "tagTitle": "Whatsapp",
+        "text": "SUPORTE"
+      },
+      "iconProps": {
+        "id": "hpa-telemarketing",
+        "size": 16,
+        "viewBox": "0 0 16 16",
+        "activeClassName": "rebel-pink",
+        "mutedClassName": "c-action-primary"
+      }
+    }
+  }
 }
 
