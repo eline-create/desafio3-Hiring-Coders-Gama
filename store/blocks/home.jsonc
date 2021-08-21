@@ -1,15 +1,44 @@
 {
   "store.home": { 
     "blocks": [
-      "rich-text"
+      "list-context.image-list#home",
+      "flex-layout.row#a"
+      // "list-context.product-list#demo1"  
+    ]     
+  },
+  "flex-layout.row#a": {
+    "children": ["list-context.product-list#demo1"]
+  }, 
+  "product-summary.shelf#demo1": {
+    "children": [
+      // "stack-layout#prodsum",
+      "product-summary-image",
+      "product-summary-name",
+      "product-rating-inline",
+      "product-summary-space",
+      "product-summary-price",
+      "product-summary-buy-button"
     ]
   },
-  "rich-text": { 
-    "props": { 
-      "text": "VTEX Store Framework",
-      "textAlignment": "CENTER",
-      "textPosition": "CENTER",
-      "font": "t-heading-1"
+  "list-context.product-list#demo1": {
+    "blocks": ["product-summary.shelf#demo1"],
+    "children": ["slider-layout#demo-products"],
+    "props": {
+      "category": "20"
+    }
+  },
+  "slider-layout#demo-products": {
+    "props": {
+      "maxItemsPerPage": {
+        "Desktop": 8
+      },
+      "itemsPerPage": {
+        "desktop": 2,
+        "tablet": 2,
+        "phone": 1
+      },
+      "fullWidth": false,
+      "infinite": false
     }
   }
 }

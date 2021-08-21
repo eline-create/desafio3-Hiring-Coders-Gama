@@ -14,7 +14,7 @@
     "props": {
       "blockClass": "sticky-header"
     },
-    "children": ["flex-layout.row#desktop"]
+    "children": ["flex-layout.row#desktop", "flex-layout.row#tabs"]
   },
   "flex-layout.row#desktop": {
     "props": {
@@ -22,17 +22,19 @@
       "verticalAlign": "center",
       "preventHorizontalStretch": true,
       "preventVerticalStretch": true,
-      "fullWidth": true
+      "fullWidth": true,
+      "colGap": 10
     },
     "children": [
       "flex-layout.col#logo-desktop",
-      "flex-layout.col#spacer",
+      //"flex-layout.col#spacer",
       "search-bar",
-      "locale-switcher",
-      "login",
+      //"locale-switcher",
+      //"login",
       "minicart.v2"
     ]
   },
+   
   "flex-layout.col#spacer": {
     "props": {
       "width": "grow"
@@ -48,12 +50,13 @@
     "props": {
       "title": "Logo",
       "href": "/",
-      "url": "https://brand.vtex.com/static/media/VTEX_pink_RGB.751a9fb5.svg",
-      "width": "80"
+      "url": "https://maratonavirtual.s3.sa-east-1.amazonaws.com/upmedal.png",
+      "width": "150"
+      
     }
   },
   "header-layout.mobile": {
-    "children": ["sticky-layout#mobile"]
+    "children": ["sticky-layout#desktop"]
   },
   "sticky-layout#mobile": {
     "children": ["flex-layout.row#mobile"]
@@ -75,5 +78,78 @@
   },
   "drawer": {
     "children": []
+  },
+  "search-bar": {
+    "props":{
+      "width": "grow",
+      "verticalAlign": "center",
+      "placeholder": "BUSCAR"
+    } 
+  },
+
+
+  "flex-layout.row#tabs": {
+    "children": ["tab-layout"],
+    "props": {
+      "preserveLayoutOnMobile": true
+    }
+  },
+  "tab-layout": {
+    "children": [
+      "tab-list"      
+    ]
+  },
+  "tab-list": {
+    "children": [
+      "tab-list.item#1",
+      "tab-list.item#2",
+      "tab-list.item#3",
+      "tab-list.item#4",
+      "tab-list.item#5",
+      "tab-list.item#6"
+      ]
+  },
+  
+  "tab-list.item#1": {
+    "props": {
+      "tabId": "promocao",
+      "label": "Promoção",
+      "defaultActiveTab": true
+    }
+  },
+  "tab-list.item#2": {
+    "props": {
+      "tabId": "sport",
+      "label": "Sport Clube"
+      
+    }
+  },
+  "tab-list.item#3": {
+    "props": {
+      "tabId": "santaCruz",
+      "label": "Santa Cruz"
+      
+    }
+  },
+  "tab-list.item#4": {
+    "props": {
+      "tabId": "nautico",
+      "label": "Náutico"
+     
+    }
+  },
+  "tab-list.item#5": {
+    "props": {
+      "tabId": "signos",
+      "label": "Signos"
+      
+    }
+  },
+  "tab-list.item#6": {
+    "props": {
+      "tabId": "guerreiros",
+      "label": "Guerreiros"
+      
+    }
   }
 }

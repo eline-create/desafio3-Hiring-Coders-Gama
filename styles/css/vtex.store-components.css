@@ -1,0 +1,13 @@
+.searchBarContainer :global(.vtex-input-prefix__group) {
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px white solid;
+}
+
+.searchBarIcon {
+    color: white;
+}
+
+.searchBarContainer :global(.vtex-input__suffix) {
+    background-color: #212121;
+}

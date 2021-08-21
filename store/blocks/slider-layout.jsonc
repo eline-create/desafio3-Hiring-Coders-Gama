@@ -1,0 +1,41 @@
+
+{ 
+  "list-context.image-list#home": {
+  "children": [
+    "slider-layout#home-images"
+  ],
+  "props": {
+    "height": "auto",
+    "images": [
+      {
+        "src": "assets/wood.png",
+        "description": "wood sport",
+        "maxHeight": "295px"
+      },
+      {
+        "src": "assets/guerreiros.png",
+        "description": "grandes guerreiros",
+        "maxHeight": "295px"
+      }
+    ]
+  }
+},
+  "slider-layout#home-images": {
+    "props": {
+      "autoplay": {
+        "timeout": 5000,
+        "stopOnHover": true
+      },
+        "itemsPerPage": {
+          "desktop": 1,
+          "tablet": 1,
+          "phone": 1
+        },
+        "infinite": true,
+        "showNavigationArrows": "always",
+        "blockClass": "carousel",
+        "fullWidth": false
+      }
+  }
+}
+
