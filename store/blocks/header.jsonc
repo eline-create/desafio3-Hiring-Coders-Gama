@@ -7,7 +7,7 @@
   },
   "header-layout.desktop": {
     "children": [
-      "sticky-layout#desktop"
+      "sticky-layout#desktop", "sticky-layout#footer"
     ]
   },
   "sticky-layout#desktop": {
@@ -151,5 +151,55 @@
       "label": "Guerreiros"
       
     }
-  }
+  },
+  "sticky-layout#footer": {
+    "props": {
+      "blockClass": "sticky-footer",
+      "position": "bottom"
+    },
+    "children": ["flex-layout.row#footer-desktop"]
+  },
+  "flex-layout.row#footer-desktop": { 
+    "children": [
+      "login",
+      "rich-text#item1",
+      "rich-text#item2",
+      "rich-text#item3"
+    ]
+  },
+  "login": {
+    "props": {
+    "emailAndPasswordTitle": "LOG-IN",
+    "accessCodeTitle": "Access Code LOG-IN",
+    "emailPlaceholder": "e-mail",
+    "passwordPlaceholder": "password",
+    "showPasswordVerificationIntoTooltip": true
+    }  
+},
+
+"rich-text#item1": {
+  "props": {
+  "textAlignment": "LEFT",
+  "textPosition": "LEFT",
+  "text": "[Desafios](/)",
+  "textColor": "c-on-emphasis"
+ }    
+} ,
+"rich-text#item2": {
+  "props": {
+  "textAlignment": "LEFT",
+  "textPosition": "LEFT",
+  "text": "[Loja](/)",
+  "textColor": "c-on-emphasis"
+ }    
+},
+"rich-text#item3": {
+  "props": {
+  "textAlignment": "LEFT",
+  "textPosition": "LEFT",
+  "text": "[Suporte](https://www.whatsapp.com/)",
+  "textColor": "c-on-emphasis"
+   } 
+ }
 }
+
