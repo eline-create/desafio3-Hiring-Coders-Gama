@@ -42,7 +42,17 @@
     }
   },
   "modal-layout#win": {
-    "children": ["rich-text#modal-content"]
+    "children": ["sandbox#lead"]
+  },
+
+  //Alternativa ao componente lead desenvolvido em React
+  "sandbox#lead": {
+    "props": {
+      "width": "100%",
+      "height": "50%",
+      "initialContent": "<form style=\"padding:8px\"><p style=\"color:white\">Preencha seus dados e receba seu bônus</p><input type=\"text\" placeholder=\"Nome\" ><input type=\"text\" placeholder=\"E-mail\" id=\"email\"><input type=\"text\" placeholder=\"Telefone\" id=\"telefone\"><br><input type=\"submit\" value=\"Receber agora!\"></form>",
+      "allowCookies": false
+    }
   },
   "rich-text#modal-content": {
     "props": {
