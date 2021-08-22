@@ -1,0 +1,11 @@
+.wrapper {
+    color: yellowgreen;
+    cursor: pointer;
+    padding: 0 10px;
+}
+
+.wrapper:hover {
+    background-color: yellowgreen;
+    color: white;
+    border-radius: 10px;
+}

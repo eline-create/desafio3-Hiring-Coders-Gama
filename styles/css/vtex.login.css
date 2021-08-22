@@ -1,0 +1,25 @@
+.formTitle {
+    color:white;
+}
+
+.sendButton :global(.vtex-button__label){
+    color: #212121;
+}
+
+.forgotPasswordLink {
+    color: white;
+    text-decoration: underline;
+}
+
+.dontHaveAccount {
+    color: white;
+    text-decoration: underline;
+}
+
+.button :global(.vtex-button){
+    background-color: yellowgreen;
+}
+
+.button :global(.vtex-button__label){
+    color:#212121;
+}
