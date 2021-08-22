@@ -10,8 +10,8 @@
 
 .sliderLayoutContainer {
     margin-top: 30px;
+    background-color: #303030;
 }
-
 
 .sliderTrackContainer {
     margin-left: 10%;
@@ -20,6 +20,9 @@
 
 .paginationDotsContainer {
     margin-bottom: 12px;
+}
+.paginationDot--isActive {
+    background-color:yellowgreen;
 }
 
 .slide {

@@ -6,9 +6,7 @@
     "blocks": ["header-layout.desktop", "header-layout.mobile"]
   },
   "header-layout.desktop": {
-    "children": [
-      "sticky-layout#desktop", "sticky-layout#footer"
-    ]
+    "children": ["sticky-layout#desktop", "sticky-layout#footer"]
   },
   "sticky-layout#desktop": {
     "props": {
@@ -27,14 +25,31 @@
     },
     "children": [
       "flex-layout.col#logo-desktop",
-      //"flex-layout.col#spacer",
       "search-bar",
-      //"locale-switcher",
-      //"login",
+      "flex-layout.col#button-desktop",
       "minicart.v2"
     ]
   },
-   
+  "flex-layout.col#button-desktop": {
+    "children": ["modal-trigger#win"]
+  },
+  "modal-trigger#win": {
+    "children": ["rich-text#win", "modal-layout#win"]
+  },
+  "rich-text#win": {
+    "props": {
+      "text": "Ganhe R$20"
+    }
+  },
+  "modal-layout#win": {
+    "children": ["rich-text#modal-content"]
+  },
+  "rich-text#modal-content": {
+    "props": {
+      "text": "Form de contato"
+    }
+  },
+
   "flex-layout.col#spacer": {
     "props": {
       "width": "grow"
@@ -44,49 +59,26 @@
     "props": {
       "verticalAlign": "middle"
     },
-    "children": ["logo"]
+    "children": ["image#logo"]
   },
-  "logo": {
+  "image#logo": {
     "props": {
       "title": "Logo",
-      "href": "/",
-      "url": "https://maratonavirtual.s3.sa-east-1.amazonaws.com/upmedal.png",
-      "width": "150"
-      
+      "link": "/",
+      "src": "assets/upmedal.png",
+      "maxHeight": "30px"
     }
   },
   "header-layout.mobile": {
-    "children": ["sticky-layout#desktop"]
-  },
-  "sticky-layout#mobile": {
-    "children": ["flex-layout.row#mobile"]
-  },
-  "flex-layout.row#mobile": {
-    "children": [
-      "drawer",
-      "logo",
-      "flex-layout.col#spacer",
-      "login",
-      "minicart.v2"
-    ],
-    "props": {
-      "blockClass": "main-header-mobile",
-      "preventHorizontalStretch": true,
-      "preserveLayoutOnMobile": true,
-      "fullWidth": true
-    }
-  },
-  "drawer": {
-    "children": []
+    "children": ["sticky-layout#desktop", "sticky-layout#footer"]
   },
   "search-bar": {
-    "props":{
+    "props": {
       "width": "grow",
       "verticalAlign": "center",
       "placeholder": "BUSCAR"
-    } 
+    }
   },
-
 
   "flex-layout.row#tabs": {
     "children": ["tab-layout"],
@@ -95,9 +87,7 @@
     }
   },
   "tab-layout": {
-    "children": [
-      "tab-list"      
-    ]
+    "children": ["tab-list"]
   },
   "tab-list": {
     "children": [
@@ -107,9 +97,9 @@
       "tab-list.item#4",
       "tab-list.item#5",
       "tab-list.item#6"
-      ]
+    ]
   },
-  
+
   "tab-list.item#1": {
     "props": {
       "tabId": "promocao",
@@ -121,37 +111,33 @@
     "props": {
       "tabId": "sport",
       "label": "Sport Clube"
-      
     }
   },
   "tab-list.item#3": {
     "props": {
       "tabId": "santaCruz",
       "label": "Santa Cruz"
-      
     }
   },
   "tab-list.item#4": {
     "props": {
       "tabId": "nautico",
       "label": "Náutico"
-     
     }
   },
   "tab-list.item#5": {
     "props": {
       "tabId": "signos",
       "label": "Signos"
-      
     }
   },
   "tab-list.item#6": {
     "props": {
-      "tabId": "guerreiros",
-      "label": "Guerreiros"
-      
+      "tabId": "sportnet",
+      "label": "SportNet"
     }
   },
+
   "sticky-layout#footer": {
     "props": {
       "blockClass": "sticky-footer",
@@ -159,29 +145,30 @@
     },
     "children": ["flex-layout.row#footer-desktop"]
   },
-  "flex-layout.row#footer-desktop": { 
+  "flex-layout.row#footer-desktop": {
     "children": [
       "flex-layout.col#spacer",
-      "flex-layout.col#menu",
+      "flex-layout.col#footerMenu",
       "flex-layout.col#spacer"
-      // "login",
-      // "rich-text#item1",
-      // "rich-text#item2",
-      // "rich-text#item3",
-      // "sandbox#h1"
     ],
     "props": {
       "horizontalAlign": "center",
       "preventHorizontalStretch": true
     }
   },
-  "flex-layout.col#menu": {
-    "children": [
-      "vtex.menu@2.x:menu#websites"
-    ],
+  "flex-layout.col#footerMenu": {
+    "children": ["vtex.menu@2.x:menu#footerMenu"],
     "props": {
       "width": "auto"
     }
+  },
+  "vtex.menu@2.x:menu#footerMenu": {
+    "children": [
+      "login",
+      "menu-item#desafios",
+      "menu-item#loja",
+      "menu-item#suporte"
+    ]
   },
   "login": {
     "props": {
@@ -191,107 +178,69 @@
       "passwordPlaceholder": "password",
       "showPasswordVerificationIntoTooltip": true,
       "logInButtonBehavior": "link"
-    }  
-},
-
-"rich-text#item1": {
-  "props": {
-  "textAlignment": "CENTER",
-  "textPosition": "CENTER",
-  "text": "[Desafios](/)",
-  "textColor": "c-on-emphasis"
- }    
-} ,
-"rich-text#item2": {
-  "props": {
-  "textAlignment": "CENTER",
-  "textPosition": "CENTER",
-  "text": "[Loja](/)",
-  "textColor": "c-on-emphasis"
- }    
-},
-"rich-text#item3": {
-  "props": {
-  "textAlignment": "CENTER",
-  "textPosition": "CENTER",
-  "text": "[Suporte](https://www.whatsapp.com/)",
-  "textColor": "c-on-emphasis"
-   } 
- },
-
-
-
-
- "vtex.menu@2.x:menu#websites": {
-  "children": [
-    "login",
-    "menu-item#desafios",
-    "menu-item#loja",
-    "menu-item#whatsapp"
-  ]
-},
-"menu-item#desafios": {
-  "props": {
-    "id": "menu-item-desafios",
-    "type": "custom",
-    "highlight": false,
-    "itemProps": {
-      "type": "internal",
-      "href": "#",
-      "noFollow": false,
-      "tagTitle": "Desafios",
-      "text": "DESAFIOS"
-    },
-    "iconProps": {
-      "id": "mpa-filter--filled",
-      "size": 16,
-      "viewBox": "0 0 16 16",
-      "activeClassName": "rebel-pink",
-      "mutedClassName": "c-action-primary"
     }
-  }
-},
-"menu-item#loja": {
-  "props": {
-    "id": "menu-item-loja",
-    "type": "custom",
-    "highlight": false,
-    "itemProps": {
-      "type": "internal",
-      "href": "#",
-      "noFollow": false,
-      "tagTitle": "Loja",
-      "text": "LOJA"
-    },
-    "iconProps": {
-      "id": "hpa-cart",
-      "size": 16,
-      "viewBox": "0 0 16 16",
-      "activeClassName": "rebel-pink",
-      "mutedClassName": "c-action-primary"
-    }
-  }
-},
-  "menu-item#whatsapp": {
+  },
+  "menu-item#desafios": {
     "props": {
-      "id": "menu-item-whatsapp",
+      "id": "menu-item-desafios",
       "type": "custom",
       "highlight": false,
       "itemProps": {
         "type": "internal",
-        "href": "https://api.whatsapp.com/send?l=pt-BR&phone=5511964335064&text=Para%20falar%20com%20a%20Gabi%F0%9F%91%B1%F0%9F%8F%BB%E2%80%8D%E2%99%80%EF%B8%8F%0A%0AClique%20enviar%F0%9F%91%89%0A%0A------------%0A*D%C3%BAvida%20sobre%3A*%20Big%20Conquest%20500k%0A*ID%3A*%2052292",
+        "href": "#",
         "noFollow": false,
-        "tagTitle": "Whatsapp",
+        "tagTitle": "Desafios",
+        "text": "DESAFIOS"
+      },
+      "iconProps": {
+        "id": "mpa-filter--filled",
+        "size": 16,
+        "viewBox": "0 0 16 16",
+        "activeClassName": "green",
+        "mutedClassName": "c-action-primary"
+      }
+    }
+  },
+  "menu-item#loja": {
+    "props": {
+      "id": "menu-item-loja",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "Loja",
+        "text": "LOJA"
+      },
+      "iconProps": {
+        "id": "hpa-cart",
+        "size": 16,
+        "viewBox": "0 0 16 16",
+        "activeClassName": "green",
+        "mutedClassName": "c-action-primary"
+      }
+    }
+  },
+  "menu-item#suporte": {
+    "props": {
+      "id": "menu-item-suporte",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "https://www.convertte.com.br/gerador-link-whatsapp/",
+        "noFollow": false,
+        "tagTitle": "Suporte",
         "text": "SUPORTE"
       },
       "iconProps": {
         "id": "hpa-telemarketing",
         "size": 16,
         "viewBox": "0 0 16 16",
-        "activeClassName": "rebel-pink",
+        "activeClassName": "green",
         "mutedClassName": "c-action-primary"
       }
     }
   }
 }
-

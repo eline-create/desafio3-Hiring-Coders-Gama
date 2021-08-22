@@ -1,3 +1,24 @@
 .buyButtonText {
     color: #3C3C3C;
 }
+
+.nameContainer {
+    background-color: rgb(37, 36, 36);
+    padding: 10px 10px;
+}
+
+.priceContainer {
+    background-color: rgb(37, 36, 36);
+}
+
+.buyButtonContainer {
+    background-color: rgb(37, 36, 36);
+}
+
+.productBrand { 
+    color: white;
+}
+
+.imageContainer {
+    background-color: rgb(37, 36, 36);
+}

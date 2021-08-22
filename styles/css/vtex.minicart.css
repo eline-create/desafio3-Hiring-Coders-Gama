@@ -1,0 +1,9 @@
+.cartIcon {
+    width: 30px;
+    height: 30px;
+    color: white;
+}
+
+.minicartSummary :global(.vtex-checkout-summary-0-x-summarySmallDisclaimer){
+    color:white;
+}

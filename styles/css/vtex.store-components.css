@@ -11,3 +11,12 @@
 .searchBarContainer :global(.vtex-input__suffix) {
     background-color: #212121;
 }
+
+.installmentsPrice {
+    color: yellowgreen;
+
+}
+
+.listPrice {
+    color: yellowgreen;
+}
