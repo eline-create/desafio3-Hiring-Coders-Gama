@@ -23,3 +23,18 @@
 .button :global(.vtex-button__label){
     color:#212121;
 }
+
+.label {
+    color: rgb(255, 253, 253);  
+}
+.container {
+    cursor: pointer;
+    padding: 0 10px;
+    background-color: #212121;
+}
+
+.container:hover {
+    background-color: yellowgreen;
+    border-radius: 10px;
+}
+

@@ -1,7 +1,7 @@
-# Desafio 3 - Hiring Coders/Gama
+# Desafio 3 - Hiring Coders/Gama Academy
 
 <center><img src="../assets/upmedal.png"></center>
-<center><h3>Artigos esportivos e desafios de corrida em um só lugar!</h3></center>
+<center><h3>A sua loja de Artigos esportivos à um clique!</h3></center>
 
 **Status:** Finalizado
 
@@ -35,12 +35,12 @@ Para isso deve-se fazer as seguintes entregas:
 3. Utilizar Markdown e CSS para formatação;
 4. Priorizar arquivos do tipo **.jsonc** para inserção de comentários nos blocos criados;
 4. Usar componentes como: Flex Layout, Slider Layout, Tab Layout, Product List, Minicart
-5. Quando listar os produtos, deixar 8 itens por página;
+5. Quando listar os produtos, deixar 8 itens por página e colocar filtro de busca por categoria na Home;
 6. Fazer layout para dispositivo mobile;
 7. Inserir aba de suporte por WhatsApp;
 8. Criar componente para cadastro de possíveis clientes(lead), contendo: **Nome, E-mail e Telefone**; 
 9. Armazenar dados do componente lead em API Gateway na AWS(Opcional: criar item no admin. para armazenar o conteúdo cadastrado pela lead);
-5. Código-fonte no github com o arquivo README detalhando as funcionalidades da programação.
+10. Código-fonte no github com o arquivo README detalhando as funcionalidades da programação.
 
 ### Estrutura e Etapas
 
@@ -93,19 +93,21 @@ Para este projeto inicializar, você precisará ter instalado em sua máquina:
 
 Para melhorar este projeto, faz-se necessário:
 
-- Desenvolver componente em React.JS;
-- Armazenar dados do componente lead em API Gateway na AWS(Opcional: criar item no admin. para armazenar o conteúdo cadastrado pela lead)
+- Desenvolver componente em React.JS para forms e footer;
+- Inserir filtro de busca na Home;
+- Armazenar dados do componente lead em API Gateway na AWS(Opcional: criar item no admin. para armazenar o conteúdo cadastrado pela lead).
 
 ### Visualização
 
 Para acessar o resultado deste projeto clique [aqui](https://discoverybookstore--hiringcoders2021.myvtex.com/).
 
-Obs.: É neessário ter uma conta de acesso ao ambiente da Vtex.
+Obs.: É necessário ter uma conta de acesso ao ambiente da Vtex.
 
 ### Agradecimentos
 
 Estou feliz pelo resultado que alcancei e mesmo fazendo que não tenha respondido a todos os requisistos propostos o resultado foi satisfatório. A construção foi rica e de grande aprendizado.
-No momento, só tenho a agradecer pela oportunidade de aprender no ambiente Hiring Coders proporcionou um aprendizado dinâmico, unindo prática e teoria. Sei que estes conhecimentos são apenas a ponta do iceberg para um grande universo de possibilidades.
+No momento, só tenho a agradecer pela oportunidade de aprender no ambiente Hiring Coders que proporcionou um aprendizado dinâmico, unindo prática e teoria. Sei que estes conhecimentos são apenas a ponta do iceberg para um grande universo de possibilidades.
+Por fim, agradeço a todos os parceiros da Vtex que estão envolvidos neste grande projeto: ACCT Consulting & Technology, Amazon Web Services (AWS), we.digi, CoreBiz e Whirlpool Corporation.
 
 ### Autora
 

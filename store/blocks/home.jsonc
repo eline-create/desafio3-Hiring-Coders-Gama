@@ -1,11 +1,13 @@
 {
   "store.home": { 
       "blocks": [
-      "list-context.image-list#home",
+       //Encontra-se no componente slider layout. Trata do carrossel de imagens da home 
+      "list-context.image-list#home",      
       "search-result-layout.customQuery#home"
     ]     
   },
 
+  //Usado para mostrar os itens da loja 
   "search-result-layout.customQuery#home": {
     "props": {
       "querySchema": {

@@ -29,37 +29,7 @@
       "flex-layout.col#button-desktop",
       "minicart.v2"
     ]
-  },
-  "flex-layout.col#button-desktop": {
-    "children": ["modal-trigger#win"]
-  },
-  "modal-trigger#win": {
-    "children": ["rich-text#win", "modal-layout#win"]
-  },
-  "rich-text#win": {
-    "props": {
-      "text": "Ganhe R$20"
-    }
-  },
-  "modal-layout#win": {
-    "children": ["sandbox#lead"]
-  },
-
-  //Alternativa ao componente lead desenvolvido em React
-  "sandbox#lead": {
-    "props": {
-      "width": "100%",
-      "height": "50%",
-      "initialContent": "<form style=\"padding:8px\"><p style=\"color:white\">Preencha seus dados e receba seu bônus</p><input type=\"text\" placeholder=\"Nome\" ><input type=\"text\" placeholder=\"E-mail\" id=\"email\"><input type=\"text\" placeholder=\"Telefone\" id=\"telefone\"><br><input type=\"submit\" value=\"Receber agora!\"></form>",
-      "allowCookies": false
-    }
-  },
-  "rich-text#modal-content": {
-    "props": {
-      "text": "Form de contato"
-    }
-  },
-
+  },  
   "flex-layout.col#spacer": {
     "props": {
       "width": "grow"
@@ -89,6 +59,31 @@
       "placeholder": "BUSCAR"
     }
   },
+  "flex-layout.col#button-desktop": {
+    "children": ["modal-trigger#win"]
+  },
+  "modal-trigger#win": {
+    "children": ["rich-text#win", "modal-layout#win"]
+  },
+  "rich-text#win": {
+    "props": {
+      "text": "Ganhe R$20"
+    }
+  },
+  "modal-layout#win": {
+    "children": ["sandbox#lead"]
+  },
+
+  //Alternativa ao componente lead desenvolvido em React. Feito com modal layout
+  // Uso de sandbox com um form em html
+  "sandbox#lead": {
+    "props": {
+      "width": "100%",
+      "height": "50%",
+      "initialContent": "<form style=\"padding:8px\"><p style=\"color:white\">Preencha seus dados e receba seu bônus</p><input type=\"text\" placeholder=\"Nome\" ><input type=\"text\" placeholder=\"E-mail\" id=\"email\"><input type=\"text\" placeholder=\"Telefone\" id=\"telefone\"><br><input type=\"submit\" value=\"Receber agora!\"></form>",
+      "allowCookies": false
+    }
+  },
 
   "flex-layout.row#tabs": {
     "children": ["tab-layout"],
@@ -96,6 +91,7 @@
       "preserveLayoutOnMobile": true
     }
   },
+  //Construção do menu de categorias da loja
   "tab-layout": {
     "children": ["tab-list"]
   },
@@ -211,6 +207,7 @@
       }
     }
   },
+
   "menu-item#loja": {
     "props": {
       "id": "menu-item-loja",
@@ -232,6 +229,8 @@
       }
     }
   },
+
+  //Para o WhatsApp, usei o gerador de link. Não coloquei um link com número válido.
   "menu-item#suporte": {
     "props": {
       "id": "menu-item-suporte",

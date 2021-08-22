@@ -8,6 +8,7 @@
     "height": "auto",
     "images": [
       {
+        //Imagens retiradas do site do desafio e inseridas na pasta assets
         "src": "assets/wood.png",
         "description": "wood sport",
         "maxHeight": "295px"
@@ -20,6 +21,8 @@
     ]
   }
 },
+
+// propriedades aplicadas para as imagens passarem como slide, tempo entre as passagens e volta infinita.
   "slider-layout#home-images": {
     "props": {
       "autoplay": {
