@@ -5,7 +5,7 @@
 
 **Status:** Finalizado
 
-### O que você pode encontrar aqui:
+#### O que você encontrará aqui:
 
 =================
 <!--ts-->
@@ -18,7 +18,6 @@
    * [Implementações futuras](#Implementações-Futuras)
    * [Agradecimentos](#Agradecimentos) 
    * [Autora](#Autora)
-   * [Licença](#Licença)
  <!--te-->
 
 ### Projeto
@@ -34,68 +33,79 @@ Para isso deve-se fazer as seguintes entregas:
 1. Criar a loja a partir do boiler template padrão da Vtex IO;
 2. Replicar a página [modelo](https://www.upmedal.com/desafios) -  A réplica não precisa ser uma cópia fiel, mas é bom tentar se aproximar ao máximo;
 3. Utilizar Markdown e CSS para formatação;
-4.
-3. Código-fonte no github com o arquivo README detalhando as funcionalidades da programação.
+4. Priorizar arquivos do tipo **.jsonc** para inserção de comentários nos blocos criados;
+4. Usar componentes como: Flex Layout, Slider Layout, Tab Layout, Product List, Minicart
+5. Quando listar os produtos, deixar 8 itens por página;
+6. Fazer layout para dispositivo mobile;
+7. Inserir aba de suporte por WhatsApp;
+8. Criar componente para cadastro de possíveis clientes(lead), contendo: **Nome, E-mail e Telefone**; 
+9. Armazenar dados do componente lead em API Gateway na AWS(Opcional: criar item no admin. para armazenar o conteúdo cadastrado pela lead);
+5. Código-fonte no github com o arquivo README detalhando as funcionalidades da programação.
 
 ### Estrutura e Etapas
 
 ```
 pasta-do-projeto
 ├── assets
-├── css
-    ├── style.css
-├── javascript
-    ├── script.js
-├── views
-│   ├── clientes
-│   ├── produtos
-├── Desafio.md
-├── index.html
-
+├── docs
+    ├── boilerplate.md
+    ├── README.md
+├── store/blocks
+    ├── default.jsonc
+    ├── header.jsonc
+    ├── home.jsonc
+    ├── product.jsonc
+    ├── slider-layout.jsonc
+├── styles
+│   ├── configs
+│   ├── css
+├── manifest.json
 ```
 
-As etapas do desenvolvimento seguiram a seguinte ordem:
+O desenvolvimento foi baseado nos seguintes passos:
 
-1. Organização das pastas;
-2. Confeccção dos arquivos em HTML;
-3. Estilização através do arquivo CSS;
-4. Link de ligação entre as páginas;
-5. Configuração do local storage para armazenamento de dados;
-6. Deploy no Netlify.
+1. Clone do repositório modelo Boilerplate;
+2. Aplicação e teste dos componentes sugeridos na documentação do desafio;
+3. Estilização através de arquivo CSS e do style.json;
+4. Construção do Readme.
 
 Obs.: Readme e versionamento no GitHub foram feitos ao longo do desenvolvimento.
 
 ### Documentação
 
-1. [Html](https://html.com/html5/)
-2. [CSS](https://www.tutorialspoint.com/css/css3_tutorial.htm)
-3. [Git](https://git-scm.com/doc)
-4. [Bash](https://www.atlassian.com/git/tutorials/git-bash)
+1. [Vtex Developer](https://developers.vtex.com/)
+2. [Vtex Learn](https://learn.vtex.com/)
+3. [Vtex App](https://github.com/vtex-apps)
+4. [CSS](https://www.tutorialspoint.com/css/css3_tutorial.htm)
+5. [Markdown](https://www.markdownguide.org/)
 
 ### Tecnologias utilizadas   
 
 Para este projeto inicializar, você precisará ter instalado em sua máquina:
 
-1. Node.js(versão igual ou superior a v12.18.3);
-2. Controle de versionamento(Git);
-3. IDE-Ambiente de desenvolvimento integrado(Visual Studio Code).
+1. Toolbelt da Vtex;
+2. Node.js(versão igual ou superior a v12.18.3);
+3. Controle de versionamento(Git);
+4. IDE-Ambiente de desenvolvimento integrado(Visual Studio Code).
 
 
 ### Implementações Futuras
 
-Para melhorar este projeto, pretendo:
+Para melhorar este projeto, faz-se necessário:
 
-- Desenvolver em ReactJs;
-- Usar outros estilos de CSS;
-- Acrescentar mais campos de informações aos forms.
+- Desenvolver componente em React.JS;
+- Armazenar dados do componente lead em API Gateway na AWS(Opcional: criar item no admin. para armazenar o conteúdo cadastrado pela lead)
 
 ### Visualização
 
-Para acessar o resultado deste projeto clique [aqui](https://bookstore-inventario.netlify.app/).
+Para acessar o resultado deste projeto clique [aqui](https://discoverybookstore--hiringcoders2021.myvtex.com/).
+
+Obs.: É neessário ter uma conta de acesso ao ambiente da Vtex.
 
 ### Agradecimentos
 
-Estou feliz pelo resultado que alcancei e mesmo fazendo sem grandes frameworks desenvolvi o produto esperado. Agradeço a oportunidade de aprender a cada dia e o ambiente Hiring Coders proporcionou um aprendizado dinâmico, unindo prática e teoria. Sei que estes conhecimentos são apenas a ponta do iceberg para um grande universo de possibilidades, mas estou muito grata em ter tido oportunidade de descobrir e pode evoluir.
+Estou feliz pelo resultado que alcancei e mesmo fazendo que não tenha respondido a todos os requisistos propostos o resultado foi satisfatório. A construção foi rica e de grande aprendizado.
+No momento, só tenho a agradecer pela oportunidade de aprender no ambiente Hiring Coders proporcionou um aprendizado dinâmico, unindo prática e teoria. Sei que estes conhecimentos são apenas a ponta do iceberg para um grande universo de possibilidades.
 
 ### Autora
 
@@ -104,6 +114,5 @@ Estou feliz pelo resultado que alcancei e mesmo fazendo sem grandes frameworks d
  <br />
  <sub><b>Eline Pimentel</b></sub></a> 
 
-### Licença
-[![License Badge](https://img.shields.io/github/license/eline-create/projetoFinal?style=plastic)](License.md)
+
 
