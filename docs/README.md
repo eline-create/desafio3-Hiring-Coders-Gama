@@ -101,7 +101,9 @@ Para melhorar este projeto, faz-se necessário:
 
 Para acessar o resultado deste projeto clique [aqui](https://discoverybookstore--hiringcoders2021.myvtex.com/).
 
-Obs.: É necessário ter uma conta de acesso ao ambiente da Vtex.
+Obs.: É necessário ter uma conta de acesso ao ambiente da Vtex. Caso não tenha conta, é possível observar o que foi feito através da imagem a seguir.
+
+<center><img src="../assets/upmedal1.jpg"></center>
 
 ### Agradecimentos
 
